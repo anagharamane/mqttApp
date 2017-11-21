@@ -22,13 +22,10 @@ client.on('connect',function(){
     client.publish('postReq',JSON.stringify(payload));
 });
 
-// client.publish('getReq',' ');
-
 client.on('message',function(topic,message){
     console.log("Topic: "+topic+" Message: ");
     if(topic == "response"){
-        msg = JSON.parse(message);
-        // msg = {};
+        msg = JSON.parse(message);        
         if(msg.type == 'GET'){
             if(msg.success){
                 console.log("Success");

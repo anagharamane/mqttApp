@@ -9,9 +9,7 @@ const Devices = require('./devices');
 client.on('connect',function(){
     client.subscribe('getReq');
     client.subscribe('getByTypeReq');
-    client.subscribe('postReq');
-    // client.subscribe('delReq');
-    // client.subscribe('putReq');
+    client.subscribe('postReq');    
     client.subscribe('response');
 });
 

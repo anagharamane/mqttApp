@@ -8,8 +8,6 @@ client.on('connect',function(){
     client.publish('getByTypeReq',device_type);
 });
 
-// client.publish('getReq',' ');
-
 client.on('message',function(topic,message){
     console.log("Topic: "+topic+" Message: "+message);
     if(topic == "response"){

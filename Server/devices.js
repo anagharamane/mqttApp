@@ -16,7 +16,7 @@ const devicesSchema = mongoose.Schema({
     },
     cpuTemp:{
         type:String,
-        default:0.0        
+        required: true
     },
     timestamp:{
         type: String,
